@@ -1,13 +1,29 @@
+/**
+\file
+\brief Заголовочный файл с описанием классов
+Данный файл содержит в себе определения классов, используемых в программе
+*/
+
+
 #pragma once
 #include <fstream>
 #include <vector>
 
+
+/**
+* @brief базовый класс, для реализации классов вывода команд 
+*
+*/
 class Observers {
 public:
 	virtual void print(const std::vector<std::string>&, const std::string) = 0;
 	virtual ~Observers() = default;
 };
 
+/**
+* @brief класс реализующий функцию вывода команд в файл  
+*
+*/
 class FileObserver: public Observers {
 	virtual void print(const std::vector<std::string>& comm, const std::string time) {
 		std::ofstream file;
@@ -21,7 +37,10 @@ class FileObserver: public Observers {
 
 };
 
-
+/**
+* @brief класс реализующий функцию вывода команд в консоль  
+*
+*/
 class TerminalObserver: public Observers {
 	virtual void print(const std::vector<std::string>& comm, const std::string) {
 		std::cout << "Bulk: ";
