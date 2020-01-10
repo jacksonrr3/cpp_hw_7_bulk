@@ -65,12 +65,12 @@ public:
 		}
 	}
 
-	void add_command() {
+		void add_command() {
 		std::string s;
 		while (std::getline(std::cin, s)) {
 			if (std::cin.eof()) {
-				notify();
-				return;
+				//notify();
+				break;
 			}
 			if (s[0] == '{') {
 				if (_comm_counter) { 
@@ -89,9 +89,8 @@ public:
 				}
 			}
 		}
+		notify();
 	}
-
-	
 
 };
 
