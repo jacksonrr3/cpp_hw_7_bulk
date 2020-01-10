@@ -1,3 +1,11 @@
+/**
+\file
+\brief Заголовочный файл с описанием классов
+Данный файл содержит в себе определения основного класса, используемого в программе
+*/
+
+
+
 #pragma once
 #include <vector>
 #include <string>
@@ -8,6 +16,10 @@
 #include <sstream>
 #include "Observers.h"
 
+/**
+* @brief Основной класс, реализующий функционал считывания команд из стандартного ввода и распределения на блоки команд
+*
+*/
 class Command {
 	std::vector<std::unique_ptr<Observers>> _obs;
 	std::vector<std::string> _comm;
