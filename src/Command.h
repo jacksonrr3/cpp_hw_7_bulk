@@ -4,6 +4,8 @@
 #include <memory>
 #include <utility>
 #include <algorithm>
+#include <ctime>
+#include <sstream>
 #include "Observers.h"
 
 class Command {
@@ -22,7 +24,11 @@ public:
 	}
 
 	void setTime() {
-		_time = ":test_time:";
+		std::time_t temp_time;
+		temp_time=std::time(0);
+		std::stringstream ss;
+		ss << temp_time;
+		ss >> _time;
 	}
 
 	void notify() {
@@ -79,3 +85,4 @@ public:
 	
 
 };
+
