@@ -4,8 +4,8 @@
 #include "Command.h"
 
 
-int main() {
-	Command command_log(3);
+int main(int args, char * argv[]) {
+	Command command_log(std::atoi(argv[1]));
 	command_log.subscribe(std::make_unique<FileObserver>());
 	command_log.subscribe(std::make_unique<TerminalObserver>());
 	command_log.add_command();
