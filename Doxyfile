@@ -7,7 +7,7 @@
 DOXYFILE_ENCODING      = UTF-8
 PROJECT_NAME           = "Bulk"
 PROJECT_NUMBER         = 0.0.1
-PROJECT_BRIEF          = "Homework_7 otus_cpp. Template magic."
+PROJECT_BRIEF          = "Homework_7 otus_cpp. GOF"
 PROJECT_LOGO           =
 OUTPUT_DIRECTORY       = 
 CREATE_SUBDIRS         = NO
