@@ -1,0 +1,10 @@
+Package: bulk
+Version: 0.0.4
+Section: devel
+Priority: optional
+Architecture: amd64
+Depends: libc6 (>= 2.2.5), libgcc1 (>= 1:3.0), libstdc++6 (>= 5.2)
+Installed-Size: 106
+Maintainer: jacksonrr3@yandex.ru
+Description: bulk built using CMake
+

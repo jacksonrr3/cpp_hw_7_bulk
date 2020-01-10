@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/travis/build/jacksonrr3/cpp_hw_7_bulk/src/Command.h
+vector
+-
+string
+-
+memory
+-
+utility
+-
+algorithm
+-
+Observers.h
+/home/travis/build/jacksonrr3/cpp_hw_7_bulk/src/Observers.h
+
+/home/travis/build/jacksonrr3/cpp_hw_7_bulk/src/Observers.h
+fstream
+-
+vector
+-
+
+/home/travis/build/jacksonrr3/cpp_hw_7_bulk/src/main.cpp
+iostream
+-
+memory
+-
+Observers.h
+/home/travis/build/jacksonrr3/cpp_hw_7_bulk/src/Observers.h
+Command.h
+/home/travis/build/jacksonrr3/cpp_hw_7_bulk/src/Command.h
+
