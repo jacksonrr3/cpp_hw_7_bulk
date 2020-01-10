@@ -89,8 +89,7 @@ public:
 				}
 			}
 		}
-		notify();
+		if (_comm_counter) { notify(); }
 	}
-
 };
 
