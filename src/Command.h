@@ -43,16 +43,21 @@ public:
 		int bracket_counter = 1;
 		std::string s;
 		while (std::getline(std::cin, s)) {
+			if (std::cin.eof()) { return; }
+
 			if (s[0] == '{') {
 				++bracket_counter;
+				continue;
 			}
-			if (s[0] == '}') {
+
+			else if (s[0] == '}') {
 				--bracket_counter;
+				if (!bracket_counter) {
+					notify();
+					return;
+				}
 			}
-			if (!bracket_counter || std::cin.eof()) {
-				notify();
-				return;
-			}
+
 			else {
 				if (_comm.empty()) { setTime(); }
 				_comm.push_back(s);
