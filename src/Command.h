@@ -68,6 +68,10 @@ public:
 	void add_command() {
 		std::string s;
 		while (std::getline(std::cin, s)) {
+			if (std::cin.eof()) {
+				notify();
+				return;
+			}
 			if (s[0] == '{') {
 				if (_comm_counter) { 
 					notify(); 
@@ -79,7 +83,7 @@ public:
 				if (_comm.empty()) { setTime(); }
 				_comm.push_back(s);
 				++_comm_counter;
-				if (_comm_counter == _block_size || std::cin.eof()) {
+				if (_comm_counter == _block_size) {
 					notify();
 					_comm_counter = 0;
 				}
