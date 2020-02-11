@@ -11,7 +11,6 @@ int main(int, char * argv[]) {
 	//command_log.add_command();
 	std::string s;
 	while (std::getline(std::cin, s)) {
-		if (std::cin.eof()) { break; }
 		command_log.add_command(s);
 	}
 	
