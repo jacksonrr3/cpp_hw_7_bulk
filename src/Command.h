@@ -27,7 +27,7 @@ class Command {
 	std::size_t _block_size;
 	std::size_t _comm_counter = 0;
 	int _bracket_counter = 0;
-	bool _is_reg = true;
+	bool _is_reg = true;  
 	std::string _time;
 
 public:
@@ -116,7 +116,7 @@ public:
 	*/
 	
 	void add_command(const std::string& s) {
-
+		if (std::cin.eof()) { return; }
 		if (s[0] == '{') {
 			if (_comm_counter) {
 				notify();
